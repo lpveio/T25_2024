@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="TEMPO_UTC">Hora SAD</string>
+    <string name="TOP">TOP</string>
+    <string name="FuelQty12A">Fuel_Qty 1/2/A</string>
+    <string name="OAT">OAT (°C)</string>
+    <string name="RPM1_R_2">RPM1/R/2 (%)</string>
+    <string name="RPM1">RPM\u2081(%)</string>
+    <string name="RPM2">RPM\(%)</string>
+    <string name="RPM">RPM(%)</string>
+    <string name="EGT">EGT(°F)</string>
+    <string name="FLAPE">FLAPE(°)</string>
+    <string name="P_ADMIN">Padm (inHg)</string>
+    <string name="RPMR">RPM\u1d63(%)</string>
+    <string name="ESTAB_POS">ESTAB POS (°)</string>
+    <string name="Vb">Vb (kt)</string>
+    <string name="ZPB">Zpb (ft)</string>
+    <string name="V">V (kt)</string>
+    <string name="ZP">Zp (ft)</string>
+    <string name="H">H (ft)</string>
+    <string name="TGT12">TGT\u2081\u2082 (%)</string>
+    <string name="TGT1">TGT\u2081(%)</string>
+    <string name="TGT2">TGT\u2082(%)</string>
+    <string name="NG12">NG\u2081\u2082 (%)</string>
+    <string name="NG1">NG\u2081(%)</string>
+    <string name="NG2">NG\u2082(%)</string>
+    <string name="TQ12">TQ\u2081\u2082(%)</string>
+    <string name="TQ1">TQ\u2081(%)</string>
+    <string name="TQ2">TQ\u2082(%)</string>
+    <string name="SASP">SAS_P(%)</string>
+    <string name="SASR">SAS_R(%)</string>
+    <string name="SASY">SAS_Y(%)</string>
+    <string name="T42">T4\u2082 (°C)</string>
+    <string name="DDC">DDC (%)</string>
+    <string name="DDL">DDL (%)</string>
+    <string name="DDM">DDM (%)</string>
+    <string name="DDN">DDN (%)</string>
+    <string name="TETA">\u03980 (º)</string>
+    <string name="PHI">\u03A60 (º)</string>
+    <string name="PSI">\u03A80 (º)</string>
+    <string name="BETA">\u03B20 (°)</string>
+    <string name="ALFA">\u03B10 (°)</string>
+    <string name="PHIPSI">\u03C6x\u03A8</string>
+    <string name="TI">TI (°C)</string>
+    <string name="P">p (°/s)</string>
+    <string name="Q">q (°/s)</string>
+    <string name="R">r (°/s)</string>
+    <string name="NZ">Nz</string>
+    <string name="NY">Ny</string>
+    <string name="NX">Nx</string>
+    <string name="Dinamica">Dinamica</string>
+    <string name="VG">GS (kt)</string>
+    <string name="CG_Lateral">CG Lat (in)</string>
+    <string name="CG_Longitudinal">CG Lng (in)</string>
+    <string name="Peso">Peso</string>
+    <string name="CG">CG</string>
+
+    <string-array name="packet_order">
+        <item>TEMPO</item>
+        <item>TOP</item>
+        <item>FuelQty1</item>
+        <item>FuelQty2</item>
+        <item>FuelQtyAux</item>
+        <item>OAT</item>
+        <item>RPM1</item>
+        <item>RPMR</item>
+        <item>RPM2</item>
+        <item>ESTAB</item>
+        <item>VB</item>
+        <item>ZPB</item>
+        <item>V</item>
+        <item>ZP</item>
+        <item>H</item>
+        <item>TGT1</item>
+        <item>TGT2</item>
+        <item>NG1</item>
+        <item>NG2</item>
+        <item>TQ1</item>
+        <item>TQ2</item>
+        <item>DDC</item>
+        <item>DDM</item>
+        <item>DDL</item>
+        <item>DDN</item>
+        <item>THETA</item>
+        <item>PHI</item>
+        <item>PSI</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>NX</item>
+        <item>NY</item>
+        <item>NZ</item>
+        <item>VG</item>
+        <item>Alfa</item>
+        <item>Beta</item>
+        <item>TI</item>
+        <item>FuelMainCap</item>
+        <item>StaMain</item>
+        <item>FuelAuxCap</item>
+        <item>StaAux</item>
+        <item>InputPeso</item>
+        <item>InputCGLong</item>
+        <item>InputCGLat</item>
+        <item>CGLong</item>
+        <item>CGLat</item>
+        <item>DDLEsq</item>
+        <item>DDLDir</item>
+        <item>DDMFr</item>
+        <item>DDMTras</item>
+        <item>DDNEsq</item>
+        <item>DDNDir</item>
+    </string-array>
+</resources>

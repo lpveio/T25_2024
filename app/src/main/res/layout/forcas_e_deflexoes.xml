@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/landscape"
+    android:baselineAligned="false">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="2dp"
+        android:background="@drawable/custom_device_border">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:text="@string/NZ"
+            android:textAlignment="center"/>
+
+        <br.cta.ipev.commom.instruments.tapes.StripTape
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="9"
+            app:position="left"
+            app:paramScale=".25"
+            app:scaleDecimalPlaces="2"
+            app:valueDecimalPlaces="2"
+            app:paramRange="2"
+            app:paramShowedScale=".25"
+            app:valueNumberOfDigits="3"
+            app:paramValue="0"
+            android:id="@+id/stNz"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:layout_margin="2dp"
+        android:background="@drawable/custom_device_border">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10sp">
+
+            <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                android:id="@+id/txtFDL"
+                style="@style/Name"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="FDL"
+                android:layout_marginLeft="100sp"/>
+            <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                android:id="@+id/txtFDLValue"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:text="@string/valor"
+                android:layout_weight="1"
+                style="@style/Value"
+                app:decimalPlaces="1"
+                android:layout_marginRight="100sp"/>
+
+        </LinearLayout>
+
+
+        <br.cta.ipev.commom.compat.instruments.Deflexions
+            android:id="@+id/chartDeltas"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="8"
+            app:lineColor="@color/black"
+            app:lineStrokeWidth="2"
+            app:valueAlfa="70"
+            app:valueColor="@android:color/holo_blue_dark"
+            app:valueStrokeWidth="25"
+            app:margin="5"
+            app:valueTextSize="6sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="2dp"
+        android:background="@drawable/custom_device_border">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:text="FDM"
+            android:textAlignment="center"/>
+        <br.cta.ipev.commom.instruments.tapes.StripTape
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="9"
+            app:position="right"
+            app:paramScale="0.5"
+            app:scaleDecimalPlaces="2"
+            app:valueDecimalPlaces="2"
+            app:paramRange="4"
+            app:paramShowedScale=".5"
+            app:valueNumberOfDigits="3"
+            app:paramValue="0"
+            android:id="@+id/stFdm"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

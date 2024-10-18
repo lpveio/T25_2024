@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nameBackgroundColor2">#FFFF00</color>
+    <color name="nameColor2">#FF4081</color>
+    <color name="offsetBackGroundColor2">#606060</color>
+    <color name="targetColor2">#4AFF00</color>
+    <color name="valueBackgroundColor2">#ff8800</color>
+    <color name="valueColor2">#000080</color>
+
+    <style name="display_text" parent="@android:style/TextAppearance">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/bgNomeParametro</item>
+        <item name="android:textColor">@color/bgValorParametroBranco</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="display_time" parent="@android:style/TextAppearance">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@android:color/black</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="display_value" parent="@android:style/TextAppearance">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/bgValorParametro</item>
+        <item name="android:textColor">@color/valueColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="display_value_yellow" parent="@android:style/TextAppearance">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/bgValorParametroAmarelo</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="display_value_red" parent="@android:style/TextAppearance">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/bgValorParametroVermelho</item>
+        <item name="android:textColor">@color/bgValorParametroBranco</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

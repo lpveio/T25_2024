@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">T-25</string>
+    <string name="tempo">TEMPO UTC</string>
+    <string name="top">TOP</string>
+    <string name="valor">VALOR</string>
+</resources>

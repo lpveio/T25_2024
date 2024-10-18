@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="big_text" parent="display_text">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="big_time" parent="display_time">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="big_value" parent="display_value">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="small_value" parent="display_value">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="small_value_yellow" parent="display_value_yellow">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="small_value_red" parent="display_value_red">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="PilotoValor" parent="ValorParametro">
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="PilotoNome" parent="NomeParametro">
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="PilotoFontSize">
+    <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="NomeParametro" parent="@android:style/TextAppearance">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/bgNomeParametro</item>
+        <item name="android:textColor">@color/txtNomeParametro</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ValorMinMax" parent="@android:style/TextAppearance">
+        <item name="android:gravity">center</item>
+        <item name="android:background">#ffffff</item>
+        <item name="android:textColor">@color/txtValorParametro</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ValorParametro" parent="@android:style/TextAppearance">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/bgValorParametro</item>
+        <item name="android:textColor">@color/txtValorParametro</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="mini_small_text" parent="display_text">
+        <item name="android:textSize">@dimen/mini_small</item>
+    </style>
+
+    <style name="small_text" parent="display_text">
+        <item name="android:textSize">@dimen/small</item>
+    </style>
+
+    <style name="Value" parent="display_value">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Name" parent="display_text">
+        <item name="textSize">16sp</item>
+    </style>
+
+    <style name="medium_text" parent="display_text">
+        <item name="android:textSize">@dimen/medium</item>
+    </style>
+
+    <style name="medium_time" parent="display_time">
+        <item name="android:textSize">@dimen/medium</item>
+    </style>
+
+    <style name="small_time" parent="display_time">
+        <item name="android:textSize">@dimen/small</item>
+    </style>
+
+    <style name="medium_value" parent="display_value">
+        <item name="android:textSize">@dimen/medium</item>
+    </style>
+
+    <style name="xbig_time" parent="display_time">
+        <item name="android:textSize">40sp</item>
+    </style>
+</resources>

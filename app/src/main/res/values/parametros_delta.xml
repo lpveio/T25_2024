@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="TETA_DELTA_TETA">\u03980/\u0394\u0398</string>
+    <string name="PHI_DELTA_PHI">\u03A60/\u0394\u03A6</string>
+    <string name="PSI_DELTA_PSI">\u03A80/\u0394\u03A8</string>
+    <string name="ALFA_DELTA_ALFA">\u03B10/\u0394\u03B1</string>
+    <string name="BETA_DELTA_BETA">\u03B20/\u0394\u03B2</string>
+    <string name="DELTA_BETA">\u0394\u03B2</string>
+    <string name="DELTA_ALFA">\u0394\u03B1</string>
+    <string name="DELTA_THETA">\u0394\u0398</string>
+    <string name="DELTA_PHI_DELTA_BETA">\u0394\u03C6 x \u0394\u03B2</string>
+    <string name="PHI_BETA">ϕ0 x β0</string>
+    <string name="DELTA_PHI_DELTA_PSI">\u0394\u03C6 x \u0394\u03A8</string>
+    <string name="PHI_PSI">ϕ0 x ψ0</string>
+    <string name="DELTA_PHI">\u0394\u03C6</string>
+    <string name="DELTA_PSI">\u0394\u03A8</string>
+    <string name="DELTA_VB">\u0394 Vb</string>
+</resources>

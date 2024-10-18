@@ -1,0 +1,51 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../mnt/Windows/Users/wagnerwol/Documents/Repositorio_Local_Linux/TerereAuto/app/src/main/res/layout/activity_data_view.xml" value="0.3703125" />
+        <entry key="../../../../mnt/Windows/Users/wagnerwol/Documents/Repositorio_Local_Linux/TerereAuto/app/src/main/res/layout/activity_main.xml" value="0.3703125" />
+        <entry key="../../../../mnt/Windows/Users/wagnerwol/Documents/Repositorio_Local_Linux/TerereAuto/app/src/main/res/layout/activity_tela_cinco.xml" value="0.12447916666666667" />
+        <entry key="../../../../mnt/Windows/Users/wagnerwol/Documents/Repositorio_Local_Linux/TerereAuto/app/src/main/res/layout/activity_tela_dois.xml" value="0.18" />
+        <entry key="../../../../mnt/Windows/Users/wagnerwol/Documents/Repositorio_Local_Linux/TerereAuto/app/src/main/res/layout/activity_tela_quatro.xml" value="0.18" />
+        <entry key="../../../../mnt/Windows/Users/wagnerwol/Documents/Repositorio_Local_Linux/TerereAuto/app/src/main/res/layout/activity_tela_tres.xml" value="0.18" />
+        <entry key="../../../../mnt/Windows/Users/wagnerwol/Documents/Repositorio_Local_Linux/TerereAuto/app/src/main/res/layout/activity_tela_um.xml" value="0.19" />
+        <entry key="../../../../mnt/Windows/Users/wagnerwol/Documents/Repositorio_Local_Linux/TerereAuto/app/src/main/res/mipmap-anydpi-v26/ic_ipev.xml" value="0.199" />
+        <entry key="../../../../mnt/Windows/Users/wagnerwol/Documents/Repositorio_Local_Linux/TerereAuto/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.199" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19" />
+        <entry key="app/src/main/res/drawable/ic_ipev_background.xml" value="0.19" />
+        <entry key="app/src/main/res/drawable/ic_ipev_icon_background.xml" value="0.19" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.19" />
+        <entry key="app/src/main/res/layout-xlarge/activity_tela_cinco.xml" value="0.13263201320132012" />
+        <entry key="app/src/main/res/layout/activity_data_view.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3328804347826087" />
+        <entry key="app/src/main/res/layout/activity_tela_cinco.xml" value="0.3328804347826087" />
+        <entry key="app/src/main/res/layout/activity_tela_dois.xml" value="0.3328804347826087" />
+        <entry key="app/src/main/res/layout/activity_tela_oito.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_tela_quatro.xml" value="0.3328804347826087" />
+        <entry key="app/src/main/res/layout/activity_tela_seis.xml" value="0.13263201320132012" />
+        <entry key="app/src/main/res/layout/activity_tela_sete.xml" value="0.13263201320132012" />
+        <entry key="app/src/main/res/layout/activity_tela_tres.xml" value="0.3328804347826087" />
+        <entry key="app/src/main/res/layout/activity_tela_um.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_tela_um_a.xml" value="0.14872112211221122" />
+        <entry key="app/src/main/res/layout/dialog_sad_option.xml" value="0.3328804347826087" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_ipev.xml" value="0.19" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_ipev_icon.xml" value="0.19" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_ipev_icon_round.xml" value="0.19" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.5" />
+      </ProjectState>
+    </option>
+  </component>
+</project>
