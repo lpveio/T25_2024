@@ -5,6 +5,7 @@ public abstract class CoefsSAD {
 
     protected double E = 7.17E10;
     protected double v = 3.3E-1;
+    protected double rho = 1.225;
 
     public static final int OFFSET_IENA = 7;
 
