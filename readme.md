@@ -1,10 +1,11 @@
-# H60
+# T27
 
 ## Desenvolvedores
 * Wagner Lima: wagnerwol@ipev.intraer - IPEV - EPD-ME (Sistemas Especialistas)
+* 1S André Silva
 
 ## Descrição
-Aplicativo para a visualização de dados de engenharia em dispositivos móveis para a Operação Tererê
+Aplicativo para a visualização de dados de engenharia em dispositivos móveis para a Operação do T25 2024
 
 ## Dependências
 * Módulo commom-release.aar do projeto Bibliotecas
