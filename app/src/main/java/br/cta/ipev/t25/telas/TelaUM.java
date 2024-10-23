@@ -1,6 +1,7 @@
 package br.cta.ipev.t25.telas;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -27,7 +28,7 @@ public class TelaUM extends AppCompatActivity implements Display {
 
         setLayout();
         init();
-        TesteCores();
+       // TesteCores();
     }
 
 
@@ -162,13 +163,21 @@ public class TelaUM extends AppCompatActivity implements Display {
                     binding.txtTOP.setValue(CVT[Index.TOP.ordinal()]);
                     binding.txtRPM.setValue(CVT[Index.RPM.ordinal()]);
                     binding.txtEGT.setValue(CVT[Index.EGT.ordinal()]);
-                    binding.txtFLAPE.setValue(CVT[Index.FLAPE.ordinal()]);
+                    binding.txtFLAPE.setValue(CVT[Index.FLAPE_SYNCHRO.ordinal()]);
                     binding.txtOAT.setValue(CVT[Index.OAT.ordinal()]);
                     binding.txtPadm.setValue(CVT[Index.P_ADMIN.ordinal()]);
                     binding.txtGases.setValue(CVT[Index.MANETE_GASES.ordinal()]);
                     binding.txtMistura.setValue(CVT[Index.MANETE_MISTURA.ordinal()]);
                     binding.txtPasso.setValue(CVT[Index.MANETE_PASSO.ordinal()]);
-                    binding.txtCapota.setStringValue(CVT[Index.CAPOTA.ordinal()] == 0 ? "FECHADA" : "ABERTA");
+                    binding.txtCapota.setStringValue(CVT[Index.CAPOTA.ordinal()] == 0.0 ? "FECHADA" : "ABERTA");
+                    binding.txtCapota.setBackgroundColor(CVT[Index.CAPOTA.ordinal()] == 0 ? getResources().getColor(R.color.bgValorParametro) : getResources().getColor(R.color.bgValorParametroVermelho));
+                    binding.txtCapota.setTextColor(CVT[Index.CAPOTA.ordinal()] == 0 ? getResources().getColor(R.color.bgNomeParametro) : getResources().getColor(R.color.white));
+                    binding.luz1.setImageResource(CVT[Index.LUZES_CIMA_1.ordinal()] == 0.0 ? R.drawable.button_gray : R.drawable.button_on);
+                    binding.luz2.setImageResource(CVT[Index.LUZES_CIMA_2.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_on);
+                    binding.luz3.setImageResource(CVT[Index.LUZES_CIMA_3.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_on);
+                    binding.luz4.setImageResource(CVT[Index.LUZES_TRANSITO_1.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_off);
+                    binding.luz5.setImageResource(CVT[Index.LUZES_TRANSITO_2.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_off);
+                    binding.luz6.setImageResource(CVT[Index.LUZES_TRANSITO_3.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_off);
 
 
                 } catch (Exception e){
@@ -189,9 +198,6 @@ public class TelaUM extends AppCompatActivity implements Display {
     private void init(){
         AppManager manager =  ((AppManager)getApplicationContext());
         manager.addDisplay(this);
-
-
-
 
     }
 

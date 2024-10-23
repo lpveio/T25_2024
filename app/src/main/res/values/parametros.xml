@@ -3,14 +3,15 @@
     <string name="TEMPO_UTC">Hora SAD</string>
     <string name="TOP">TOP</string>
     <string name="FuelQty12A">Fuel_Qty 1/2/A</string>
-    <string name="OAT">OAT (°C)</string>
+    <string name="OAT">TA(°C)</string>
     <string name="RPM1_R_2">RPM1/R/2 (%)</string>
     <string name="RPM1">RPM\u2081(%)</string>
     <string name="RPM2">RPM\(%)</string>
     <string name="RPM">RPM(%)</string>
     <string name="EGT">EGT(°F)</string>
     <string name="FLAPE">FLAPE(°)</string>
-    <string name="P_ADMIN">Padm (inHg)</string>
+    <string name="FLAPE2">DF_BK(°)</string>
+    <string name="P_ADMIN">Padm(inHg)</string>
     <string name="RPMR">RPM\u1d63(%)</string>
     <string name="ESTAB_POS">ESTAB POS (°)</string>
     <string name="Vb">Vb (kt)</string>

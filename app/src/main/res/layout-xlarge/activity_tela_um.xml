@@ -56,7 +56,7 @@
             style="@style/big_value"
             android:text="VALOR"
             android:id="@+id/txtRPM"
-            custom:decimalPlaces="0"/>
+            custom:decimalPlaces="1"/>
         <br.cta.ipev.commom.compat.instruments.SingleDisplay
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -70,7 +70,7 @@
             style="@style/big_value"
             android:text="VALOR"
             android:id="@+id/txtEGT"
-            custom:decimalPlaces="0"/>
+            custom:decimalPlaces="1"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -82,7 +82,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             style="@style/small_text"
-            android:text="@string/FLAPE"/>
+            android:text="@string/FLAPE2"/>
         <br.cta.ipev.commom.compat.instruments.SingleDisplay
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -90,7 +90,7 @@
             style="@style/big_value"
             android:text="VALOR"
             android:id="@+id/txtFLAPE"
-            custom:decimalPlaces="0"/>
+            custom:decimalPlaces="1"/>
         <br.cta.ipev.commom.compat.instruments.SingleDisplay
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -104,7 +104,7 @@
             style="@style/big_value"
             android:text="VALOR"
             android:id="@+id/txtOAT"
-            custom:decimalPlaces="0"/>
+            custom:decimalPlaces="1"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -129,8 +129,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/small_text"
-            android:text="MANETE GASES"/>
+            style="@style/medium_text"
+            android:text="Dman"/>
         <br.cta.ipev.commom.compat.instruments.SingleDisplay
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -149,8 +149,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/small_text"
-            android:text="MANETE MISTURA"/>
+            style="@style/medium_text"
+            android:text="Dmist"/>
         <br.cta.ipev.commom.compat.instruments.SingleDisplay
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -163,8 +163,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/small_text"
-            android:text="MANETE PASSO"/>
+            style="@style/medium_text"
+            android:text="Dhel"/>
         <br.cta.ipev.commom.compat.instruments.SingleDisplay
             android:layout_width="0dp"
             android:layout_height="match_parent"

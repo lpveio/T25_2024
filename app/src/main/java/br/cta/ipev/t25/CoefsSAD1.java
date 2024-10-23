@@ -10,8 +10,6 @@ import br.cta.isad.iCounts2UE;
 import br.cta.isad.EV;
 
 public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
-    public static final String TAG = "CoefsSAD1";
-
 
     public static final int TOP_HI = 57 - OFFSET_IENA;
     public static final int TOP_LO = 58 - OFFSET_IENA;
@@ -44,7 +42,6 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
         double[] result = new double[Index.values().length];
         double[] CV;
 
-
         //TEMPO
         result[Index.TEMPO.ordinal()] = EV.sadtime2secs(0xffff & counts[TCG102C_0_J3_HI_TI], 0xffff & counts[TCG102C_0_J3_LO_TI], 0xffff & counts[TCG102C_0_J3_MI_TI]);
 
@@ -52,57 +49,58 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
         result[Index.TOP.ordinal()] = counts[TOP_LO];
 
         //RPM
-        CV = new double[]{1};
+        CV = new double[]{1,0};
         result[Index.RPM.ordinal()] = EV.polyval(CV,counts[RPM_LO]);
 
         //EGT
-        CV = new double[]{1};
+        CV = new double[]{1,0};
         result[Index.EGT.ordinal()] = EV.polyval(CV,counts[EGT]);
 
         //FLAPE
-        CV = new double[]{1};
+        CV = new double[]{1,0};
         result[Index.FLAPE_SYNCHRO.ordinal()] = EV.polyval(CV,counts[FLAPE_SYNCHRO]);
 
         //OAT
-        CV = new double[]{1};
+        CV = new double[]{1,0};
         result[Index.OAT.ordinal()] = EV.polyval(CV,counts[OAT]);
 
         //P_ADMISSAO
-        CV = new double[]{1};
+        CV = new double[]{1,0};
         result[Index.P_ADMIN.ordinal()] = EV.polyval(CV,counts[P_ADMIN]);
 
         //MANETE_GASES
-        CV = new double[]{1};
+        CV = new double[]{1,0};
         result[Index.MANETE_GASES.ordinal()] = EV.polyval(CV,counts[M_GASES]);
 
         //MANETE_MISTURA
-        CV = new double[]{1};
+        CV = new double[]{1,0};
         result[Index.MANETE_MISTURA.ordinal()] = EV.polyval(CV,counts[M_MISTURA]);
 
         //MANETE_PASSO
-        CV = new double[]{1};
+        CV = new double[]{1,0};
         result[Index.MANETE_PASSO.ordinal()] = EV.polyval(CV,counts[M_PASSO]);
 
         //CAPOTA
-        result[Index.CAPOTA.ordinal()] = Conversion.bit1(DSI_LO, 12);
+        result[Index.CAPOTA.ordinal()] = Conversion.bit1(counts[DSI_LO], 12);
+
 
         //LUZ CIMA 1
-        result[Index.LUZES_CIMA_1.ordinal()] = Conversion.bit1(DSI_HI, 6);
+        result[Index.LUZES_CIMA_1.ordinal()] = Conversion.bit1(counts[DSI_HI], 6);
 
         //LUZ CIMA 2
-        result[Index.LUZES_CIMA_2.ordinal()] = Conversion.bit1(DSI_HI, 7);
+        result[Index.LUZES_CIMA_2.ordinal()] = Conversion.bit1(counts[DSI_HI], 7);
 
         //LUZ CIMA 3
-        result[Index.LUZES_CIMA_3.ordinal()] = Conversion.bit1(DSI_HI, 8);
+        result[Index.LUZES_CIMA_3.ordinal()] = Conversion.bit1(counts[DSI_HI], 8);
 
         //LUZ TRANSITO 1
-        result[Index.LUZES_TRANSITO_1.ordinal()] = Conversion.bit1(DSI_HI, 9);
+        result[Index.LUZES_TRANSITO_1.ordinal()] = Conversion.bit1(counts[DSI_HI], 9);
 
         //LUZ TRANSITO 2
-        result[Index.LUZES_TRANSITO_2.ordinal()] = Conversion.bit1(DSI_HI, 10);
+        result[Index.LUZES_TRANSITO_2.ordinal()] = Conversion.bit1(counts[DSI_HI], 10);
 
         //LUZ TRANSITO 3
-        result[Index.LUZES_TRANSITO_3.ordinal()] = Conversion.bit1(DSI_HI, 11);
+        result[Index.LUZES_TRANSITO_3.ordinal()] = Conversion.bit1(counts[DSI_HI], 11);
 
 
         this._currentCVT = result;
