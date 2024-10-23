@@ -172,12 +172,12 @@ public class TelaUM extends AppCompatActivity implements Display {
                     binding.txtCapota.setStringValue(CVT[Index.CAPOTA.ordinal()] == 0.0 ? "FECHADA" : "ABERTA");
                     binding.txtCapota.setBackgroundColor(CVT[Index.CAPOTA.ordinal()] == 0 ? getResources().getColor(R.color.bgValorParametro) : getResources().getColor(R.color.bgValorParametroVermelho));
                     binding.txtCapota.setTextColor(CVT[Index.CAPOTA.ordinal()] == 0 ? getResources().getColor(R.color.bgNomeParametro) : getResources().getColor(R.color.white));
-                    binding.luz1.setImageResource(CVT[Index.LUZES_CIMA_1.ordinal()] == 0.0 ? R.drawable.button_gray : R.drawable.button_on);
-                    binding.luz2.setImageResource(CVT[Index.LUZES_CIMA_2.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_on);
-                    binding.luz3.setImageResource(CVT[Index.LUZES_CIMA_3.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_on);
-                    binding.luz4.setImageResource(CVT[Index.LUZES_TRANSITO_1.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_off);
-                    binding.luz5.setImageResource(CVT[Index.LUZES_TRANSITO_2.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_off);
-                    binding.luz6.setImageResource(CVT[Index.LUZES_TRANSITO_3.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_off);
+                    binding.luz1.setImageResource(CVT[Index.LUZES_CIMA_1.ordinal()] == 0.0 ? R.drawable.button_gray : R.drawable.button_off);
+                    binding.luz2.setImageResource(CVT[Index.LUZES_CIMA_2.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_off);
+                    binding.luz3.setImageResource(CVT[Index.LUZES_CIMA_3.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_off);
+                    binding.luz4.setImageResource(CVT[Index.LUZES_TRANSITO_1.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_on);
+                    binding.luz5.setImageResource(CVT[Index.LUZES_TRANSITO_2.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_on);
+                    binding.luz6.setImageResource(CVT[Index.LUZES_TRANSITO_3.ordinal()] == 0 ? R.drawable.button_gray : R.drawable.button_on);
 
 
                 } catch (Exception e){
