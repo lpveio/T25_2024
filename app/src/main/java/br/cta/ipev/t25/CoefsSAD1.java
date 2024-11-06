@@ -17,10 +17,8 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
     public static final int TCG102C_0_J3_LO_TI = 48 - OFFSET_IENA;
     public static final int TCG102C_0_J3_MI_TI=  49 - OFFSET_IENA;
 
-    public static final int FF = 26 - OFFSET_IENA;
-    public static final int T5 = 55 - OFFSET_IENA;
+    public static final int T5 = 59 - OFFSET_IENA;
     public static final int RPM_LO = 31 - OFFSET_IENA;
-
     public static final int M_GASES = 20 - OFFSET_IENA;
     public static final int M_MISTURA = 21 - OFFSET_IENA;
     public static final int M_PASSO = 22 - OFFSET_IENA;
@@ -33,7 +31,7 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
     public static final int PB = 25 - OFFSET_IENA;
     public static final int PCOMB = 26  - OFFSET_IENA;
     public static final int POLEO = 28 - OFFSET_IENA;
-    public static final int TOLEO = 59  - OFFSET_IENA;
+    public static final int TOLEO = 55  - OFFSET_IENA;
     public static final int FLAPE = 14 - OFFSET_IENA;
     public static final int TI = 56 - OFFSET_IENA;
     public static final int FLAPE_SYNCHRO = 15 - OFFSET_IENA;
@@ -76,7 +74,7 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
         result[Index.TOP.ordinal()] = counts[TOP_LO];
 
         //RPM
-        CV = new double[]{0.40268456375838926174496644295302};
+        CV = new double[]{0.4026845638, 0};
         result[Index.RPM.ordinal()] = EV.polyval(CV,counts[RPM_LO]);
 
         //EGT
@@ -109,7 +107,6 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
 
         //CAPOTA
         result[Index.CAPOTA.ordinal()] = Conversion.bit1(counts[DSI_LO], 12);
-
 
         //LUZ CIMA 1
         result[Index.LUZES_TREM_1.ordinal()] = Conversion.bit1(counts[DSI_HI], 6);
