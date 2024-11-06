@@ -20,6 +20,7 @@ public class DataViewActivity  extends ActivityGroup{
     private TabHost tabHost;
     private boolean isTablet;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +43,8 @@ public class DataViewActivity  extends ActivityGroup{
     private void createMission(){
 
         IenaPacketReceiver ienaPacketReceiver = new IenaPacketReceiver(getBaseContext());
-        ienaPacketReceiver.setConverter(new CoefsSAD1());
+        ienaPacketReceiver.setConverter(new CoefsSAD1(this));
+
         missionManager.setUdpConnector(new UDPConnector(1024),ienaPacketReceiver);
         missionManager.start();
     }
@@ -72,6 +74,8 @@ public class DataViewActivity  extends ActivityGroup{
             tabHost.getTabWidget().setVisibility(View.GONE); // Oculta apenas as abas
 
         }
+
+
 
 
     }

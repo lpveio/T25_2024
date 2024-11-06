@@ -41,298 +41,497 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
-        android:orientation="horizontal">
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/medium_text"
-            android:text="@string/RPM"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/big_value"
-            android:text="VALOR"
-            android:id="@+id/txtRPM"
-            custom:decimalPlaces="1"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/medium_text"
-            android:text="@string/EGT"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/big_value"
-            android:text="VALOR"
-            android:id="@+id/txtEGT"
-            custom:decimalPlaces="1"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:orientation="horizontal">
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/big_text"
-            android:text="@string/FLAPE2"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/big_value"
-            android:text="VALOR"
-            android:id="@+id/txtFLAPE"
-            custom:decimalPlaces="1"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/medium_text"
-            android:text="@string/OAT"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/big_value"
-            android:text="VALOR"
-            android:id="@+id/txtOAT"
-            custom:decimalPlaces="1"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:orientation="horizontal">
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/medium_text"
-            android:text="@string/P_ADMIN"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/big_value"
-            android:text="VALOR"
-            android:id="@+id/txtPadm"
-            custom:decimalPlaces="1"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/medium_text"
-            android:text="Dman(%)"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/big_value"
-            android:text="VALOR"
-            android:id="@+id/txtGases"
-            custom:decimalPlaces="1"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:orientation="horizontal">
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/medium_text"
-            android:text="Dmist(%)"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/big_value"
-            android:text="VALOR"
-            android:id="@+id/txtMistura"
-            custom:decimalPlaces="1"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/medium_text"
-            android:text="Dhel(%)"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/big_value"
-            android:text="VALOR"
-            android:id="@+id/txtPasso"
-            custom:decimalPlaces="1"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:orientation="horizontal">
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/medium_text"
-            android:text="CAPOTA"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/medium_value"
-            android:text="FECHADA"
-            android:id="@+id/txtCapota"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/medium_text"
-            android:text=""/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/big_value"
-            android:text=""
-            android:id="@+id/txtLFF"/>
-    </LinearLayout>
-
-
-
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="horizontal">
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:background="@color/black"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/medium_text"
-            android:text="LUZ TRÂNSITO"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="14"
         android:orientation="horizontal">
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/luz1"
-            android:src="@drawable/button_gray">
+            android:orientation="vertical">
 
-        </ImageView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal">
 
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    style="@style/medium_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Zpi (ft)" />
+
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="VALOR"
+                    android:id="@+id/txtZPI"
+                    custom:decimalPlaces="0"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_text"
+                    android:text="Vi (kias)"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="VALOR"
+                    android:id="@+id/txtVI"
+                    custom:decimalPlaces="0"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_text"
+                    android:text="TREM"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="RECOLHIDO"
+                    android:id="@+id/txtTREM"
+                    custom:decimalPlaces="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_text"
+                    android:text="FLAPE (°)"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="VALOR"
+                    android:id="@+id/txtFLAPE"
+                    custom:decimalPlaces="0"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_text"
+                    android:text="CAPOTA"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_value"
+                    android:text="FECHADA"
+                    android:id="@+id/txtCapota"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_text"
+                    android:text="BOOSTER"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="ON"
+                    android:id="@+id/txtBooster"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:text="00:00"
+                android:textSize="80sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="START"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:id="@+id/buttonSTART">
+
+                </Button>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:text="STOP"
+                    android:id="@+id/buttonSTOP">
+
+                </Button>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ZERAR"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:id="@+id/buttonZERO">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DETOT INICIAL: "
+                    android:textSize="20sp"
+                    android:typeface="normal"
+                    android:textStyle="bold"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="     0    "
+                    android:id="@+id/insereDETOT"
+                    android:textStyle="bold"
+                    android:inputType="numberDecimal"
+                    android:textSize="25sp">
+                </EditText>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salvar"
+                    android:id="@+id/buttonDETOT">
+
+                </Button>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="-15dp"
-        android:layout_weight="3"
-        android:orientation="horizontal">
+        android:layout_weight="10"
+        android:orientation="vertical">
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/luz2"
-            android:src="@drawable/button_gray">
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
 
-        </ImageView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-        <ImageView
+
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_text"
+                    android:text="EGT (°F)"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="VALOR"
+                    android:id="@+id/txtEGT"
+                    custom:decimalPlaces="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_text"
+                    android:text="DETOT(litros)"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="VALOR"
+                    android:id="@+id/txtDETOT"
+                    custom:decimalPlaces="0"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/luz3"
-            android:src="@drawable/button_gray">
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
 
-        </ImageView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_text"
+                    android:text="TCC (°F)"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="VALOR"
+                    android:id="@+id/txtTCC"
+                    custom:decimalPlaces="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_text"
+                    android:text="TA (°C)"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="VALOR"
+                    android:id="@+id/txtTA"
+                    custom:decimalPlaces="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_text"
+                    android:text="@string/P_ADMIN"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="VALOR"
+                    android:id="@+id/txtPadm"
+                    custom:decimalPlaces="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_text"
+                    android:text="PÓleo (psi)"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="VALOR"
+                    android:id="@+id/txtPOLEO"
+                    custom:decimalPlaces="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_text"
+                    android:text="RPM"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="VALOR"
+                    android:id="@+id/txtRPM"
+                    custom:decimalPlaces="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_text"
+                    android:text="TÓleo (psi)"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="VALOR"
+                    android:id="@+id/txtTOLEO"
+                    custom:decimalPlaces="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_text"
+                    android:text="FF (l/h)"/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text="VALOR"
+                    android:id="@+id/txtFF"
+                    custom:decimalPlaces="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/medium_text"
+                    android:text=""/>
+                <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/big_value"
+                    android:text=""
+                    android:id="@+id/txtPasso2"
+                    custom:decimalPlaces="1"/>
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="horizontal">
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
-            android:layout_width="0dp"
-            android:background="@color/black"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/medium_text"
-            android:text="LUZ TREM"/>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/luz4"
-            android:src="@drawable/button_gray">
-
-        </ImageView>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:layout_marginTop="-15dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/luz5"
-            android:src="@drawable/button_gray">
-
-        </ImageView>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/luz6"
-            android:src="@drawable/button_gray">
-
-        </ImageView>
-
-
-    </LinearLayout>
 
 
 

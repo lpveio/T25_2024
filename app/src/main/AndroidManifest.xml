@@ -15,6 +15,7 @@
         android:theme="@style/Theme.TerereAuto">
         <activity
             android:name=".DataViewActivity"
+            android:windowSoftInputMode="stateHidden"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
