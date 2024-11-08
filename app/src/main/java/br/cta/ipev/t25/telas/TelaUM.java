@@ -185,7 +185,6 @@ public class TelaUM extends AppCompatActivity implements Display {
     }
 
     private String tremPosicao(double trem_1, double trem_2, double trem_3, double transito_1, double transito_2, double transito_3){
-        String trem = "";
 
         if (trem_1 == 0.0 && trem_2 == 0.0 && trem_3 == 0.0 && transito_1 == 1.0 && transito_2 == 1.0 && transito_3 == 1.0){
             return "ESTENDIDO";
@@ -204,7 +203,7 @@ public class TelaUM extends AppCompatActivity implements Display {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
     }
 
-    private void saveDETOT(int sad){
+    private void saveDETOT(){
         SharedPreferences preferences = getSharedPreferences(PREF_FILE_NAME, MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putInt("detot", detot); // value to store
@@ -274,7 +273,7 @@ public class TelaUM extends AppCompatActivity implements Display {
         binding.buttonDETOT.setOnClickListener(v -> {
 
             detot = binding.insereDETOT.getText().toString().isEmpty() ? 0 : Integer.parseInt(binding.insereDETOT.getText().toString());
-            saveDETOT(detot);
+            saveDETOT();
 
         });
 
