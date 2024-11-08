@@ -36,6 +36,8 @@ public class TelaUM extends AppCompatActivity implements Display {
     private boolean isFlashing = false;
     public static final String PREF_FILE_NAME = "T25_DETOT";
     public int detot;
+    private Runnable blinkRunnable;
+    private boolean isBlinking = false;
     public AppManager manager;
 
     @Override
@@ -62,7 +64,7 @@ public class TelaUM extends AppCompatActivity implements Display {
             if (seconds >= 55) {
                 if (!isFlashing) {
                     isFlashing = true;
-                    startFlashing();
+                    startFlashingCHRONO();
                 }
             } else {
                 // Para de piscar e reseta a cor quando fora do intervalo
@@ -79,7 +81,7 @@ public class TelaUM extends AppCompatActivity implements Display {
         }
     };
 
-    private void startFlashing() {
+    private void startFlashingCHRONO() {
         handler.post(flashRunnable);
     }
 
@@ -100,6 +102,48 @@ public class TelaUM extends AppCompatActivity implements Display {
     };
 
 
+    private void startBlinkingTextView() {
+        blinkRunnable = new Runnable() {
+            @Override
+            public void run() {
+                if (binding.txtTempo.getCurrentTextColor() == Color.RED) {
+                    binding.txtTempo.setTextColor(Color.BLACK);
+                } else {
+                    binding.txtTempo.setTextColor(Color.RED);
+                }
+                handler.postDelayed(this, 500); // Alterna a cada 500ms
+            }
+        };
+        handler.post(blinkRunnable);
+        isBlinking = true;
+    }
+
+    private void stopBlinkingTextView() {
+        if (isBlinking) {
+            handler.removeCallbacks(blinkRunnable);
+            binding.txtTempo.setTextColor(Color.WHITE); // Restaura a cor original
+            isBlinking = false;
+        }
+    }
+
+    private void checkBlinkingCondition(double tempoEmSegundos) {
+        // Converte para minutos e segundos
+        int minutos = (int) (tempoEmSegundos / 60);
+        int segundos = (int) (tempoEmSegundos % 60);
+
+        // Verifica se está no intervalo de 29m30s a 30m30s ou de 1h14m30s a 1h15m30s
+        boolean isInFirstInterval = (minutos == 29 && segundos >= 30) || (minutos == 30 && segundos <= 30);
+        boolean isInSecondInterval = (minutos == 74 && segundos >= 30) || (minutos == 75 && segundos <= 30);
+
+        if (isInFirstInterval || isInSecondInterval) {
+            if (!isBlinking) {
+                startBlinkingTextView();
+            }
+        } else {
+            stopBlinkingTextView();
+        }
+    }
+
 
     @Override
     public void update(double[] CVT) {
@@ -108,6 +152,7 @@ public class TelaUM extends AppCompatActivity implements Display {
             public void run() {
                 try {
                     binding.txtTempo.setText(Convertions.sec2dhms(CVT[Index.TEMPO.ordinal()]));
+                    checkBlinkingCondition(CVT[Index.TEMPO.ordinal()]);
                     binding.txtTOP.setValue(CVT[Index.TOP.ordinal()]);
                     binding.txtZPI.setValue(CVT[Index.ZPI.ordinal()]);
                     binding.txtZPI.setBackgroundColor(Alerta.setAlertZPI(CVT[Index.ZPI.ordinal()]));
@@ -138,7 +183,6 @@ public class TelaUM extends AppCompatActivity implements Display {
             }
         });
     }
-
 
     private String tremPosicao(double trem_1, double trem_2, double trem_3, double transito_1, double transito_2, double transito_3){
         String trem = "";

@@ -63,9 +63,9 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
 
 
         DETOT_MOMENTO =  (Detot_momento/ (60 * 60)) / 32;
-        Log.d("", "DETOT MOMENTO: " + DETOT_MOMENTO);
+      //  Log.d("", "DETOT MOMENTO: " + DETOT_MOMENTO);
         DETOT_CONSUMIDO = DETOT_CONSUMIDO + DETOT_MOMENTO;
-        Log.d("", "DETOT CONSUMIDO: " + DETOT_CONSUMIDO);
+       // Log.d("", "DETOT CONSUMIDO: " + DETOT_CONSUMIDO);
 
 
         return DETOT_TOTAL - DETOT_CONSUMIDO;
@@ -79,7 +79,9 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
 
         TEMPO_SAD_MOMENTO =  Tempo_Sad - TEMPO_SAD_ANTERIOR ;
         TEMPO_SAD_ANTERIOR = Tempo_Sad;
+
         DETOT_MOMENTO2 =  (DetotMomento/ (60 * 60)) * TEMPO_SAD_MOMENTO ;
+
         DETOT_CONSUMIDO2 += DETOT_MOMENTO2;
         return DETOT_TOTAL - DETOT_CONSUMIDO2;
     }
