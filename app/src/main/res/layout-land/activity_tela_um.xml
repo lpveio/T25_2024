@@ -517,13 +517,13 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     style="@style/medium_text"
-                    android:text=""/>
+                    android:text="DETOT(SAD)"/>
                 <br.cta.ipev.commom.compat.instruments.SingleDisplay
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     style="@style/big_value"
-                    android:text=""
+                    android:text="VALOR"
                     android:id="@+id/txtPasso2"
                     custom:decimalPlaces="1"/>
             </LinearLayout>

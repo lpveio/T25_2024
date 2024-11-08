@@ -29,6 +29,7 @@ public enum Index {
     VI,
     FF,
     DETOT,
+    DETOT_SEG,
     BOOSTER,
     TREM,
     FQM1,

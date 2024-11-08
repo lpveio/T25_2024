@@ -189,13 +189,22 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:text="00:00"
-                android:textSize="80sp" />
+                android:textSize="70sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
                 <Button
                     android:layout_width="wrap_content"
@@ -218,9 +227,10 @@
 
                 </Button>
 
+                </LinearLayout>
                 <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="100dp"
                     android:text="ZERAR"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
@@ -235,7 +245,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -250,7 +260,7 @@
 
                 <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:hint="     0    "
                     android:id="@+id/insereDETOT"
                     android:textStyle="bold"
@@ -328,7 +338,7 @@
                     style="@style/big_value"
                     android:text="VALOR"
                     android:id="@+id/txtDETOT"
-                    custom:decimalPlaces="0"/>
+                    custom:decimalPlaces="1"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -516,15 +526,15 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    style="@style/medium_text"
-                    android:text=""/>
+                    style="@style/small_text"
+                    android:text="DETOT(SAD)"/>
                 <br.cta.ipev.commom.compat.instruments.SingleDisplay
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     style="@style/big_value"
-                    android:text=""
-                    android:id="@+id/txtPasso2"
+                    android:text="VALOR"
+                    android:id="@+id/txtDETOT2"
                     custom:decimalPlaces="1"/>
             </LinearLayout>
         </LinearLayout>

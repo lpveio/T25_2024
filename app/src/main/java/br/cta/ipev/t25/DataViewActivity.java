@@ -2,6 +2,7 @@ package br.cta.ipev.t25;
 
 import android.app.ActivityGroup;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,7 +28,7 @@ public class DataViewActivity  extends ActivityGroup{
         setContentView(R.layout.activity_data_view);
 
         this.isTablet = true;
-        //this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        //this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         missionManager = (AppManager) getApplicationContext();
         createMission();
         createTabs();

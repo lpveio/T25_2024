@@ -125,6 +125,7 @@ public class TelaUM extends AppCompatActivity implements Display {
                     binding.txtRPM.setValue(CVT[Index.RPM.ordinal()]);
                     binding.txtFF.setValue(CVT[Index.FF.ordinal()]);
                     binding.txtDETOT.setValue(CVT[Index.DETOT.ordinal()]);
+                    binding.txtDETOT2.setValue(CVT[Index.DETOT_SEG.ordinal()]);
                     binding.txtTA.setValue(CVT[Index.TA.ordinal()]);
                     binding.txtPOLEO.setValue(CVT[Index.POLEO.ordinal()]);
                     binding.txtPOLEO.setBackgroundColor(Alerta.setAlertPoleo(CVT[Index.POLEO.ordinal()]));
@@ -142,10 +143,10 @@ public class TelaUM extends AppCompatActivity implements Display {
     private String tremPosicao(double trem_1, double trem_2, double trem_3, double transito_1, double transito_2, double transito_3){
         String trem = "";
 
-        if (trem_1 == 1.0 && trem_2 == 1.0 && trem_3 == 1.0){
-            return "RECOLHIDO";
-        } else if (trem_1 == 0.0 && trem_2 == 0.0 && trem_3 == 0.0 && transito_1 == 0.0 && transito_2 == 0.0 && transito_3 == 0.0){
-           return "ESTENDIDO";
+        if (trem_1 == 0.0 && trem_2 == 0.0 && trem_3 == 0.0 && transito_1 == 1.0 && transito_2 == 1.0 && transito_3 == 1.0){
+            return "ESTENDIDO";
+        } else if (trem_1 == 1.0 && trem_2 == 1.0 && trem_3 == 1.0 && transito_1 == 0.0 && transito_2 == 0.0 && transito_3 == 0.0){
+           return "RECOLHIDO";
         } else {
             return "EM TRANSITO";
         }

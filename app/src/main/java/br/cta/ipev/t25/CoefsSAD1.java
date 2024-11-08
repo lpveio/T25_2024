@@ -16,7 +16,6 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
     public static final int TCG102C_0_J3_HI_TI = 41 - OFFSET_IENA;
     public static final int TCG102C_0_J3_LO_TI = 48 - OFFSET_IENA;
     public static final int TCG102C_0_J3_MI_TI=  49 - OFFSET_IENA;
-
     public static final int T5 = 59 - OFFSET_IENA;
     public static final int RPM_LO = 31 - OFFSET_IENA;
     public static final int M_GASES = 20 - OFFSET_IENA;
@@ -36,7 +35,12 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
     public static final int TI = 56 - OFFSET_IENA;
     public static final int FLAPE_SYNCHRO = 15 - OFFSET_IENA;
     public static int DETOT_TOTAL;
-    public static double DETOT_CONSUMIDO;
+    public double DETOT_CONSUMIDO2 = 0;
+    public double DETOT_CONSUMIDO = 0;
+    public static double TEMPO_SAD_MOMENTO;
+    public static double TEMPO_SAD_ANTERIOR = 0;
+    public static double AJUSTE_MBAR_PSI_PB;
+    public static double DETOT_MOMENTO2;
     public static double DETOT_MOMENTO;
     private Context context;
     public SharedPreferences sharedPref;
@@ -57,10 +61,30 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
 
     public double  CalculeDETOT (double Detot_momento) {
 
-        DETOT_MOMENTO =  (Detot_momento/ 60 * 60) / 32000;
-        DETOT_CONSUMIDO += DETOT_MOMENTO;
+
+        DETOT_MOMENTO =  (Detot_momento/ (60 * 60)) / 32;
+        Log.d("", "DETOT MOMENTO: " + DETOT_MOMENTO);
+        DETOT_CONSUMIDO = DETOT_CONSUMIDO + DETOT_MOMENTO;
+        Log.d("", "DETOT CONSUMIDO: " + DETOT_CONSUMIDO);
+
+
         return DETOT_TOTAL - DETOT_CONSUMIDO;
     }
+
+    public double  CalculeDETOTSEG (double Tempo_Sad , double DetotMomento) {
+
+        if (TEMPO_SAD_ANTERIOR == 0){
+            TEMPO_SAD_ANTERIOR = Tempo_Sad;
+        }
+
+        TEMPO_SAD_MOMENTO =  Tempo_Sad - TEMPO_SAD_ANTERIOR ;
+        TEMPO_SAD_ANTERIOR = Tempo_Sad;
+        DETOT_MOMENTO2 =  (DetotMomento/ (60 * 60)) * TEMPO_SAD_MOMENTO ;
+        DETOT_CONSUMIDO2 += DETOT_MOMENTO2;
+        return DETOT_TOTAL - DETOT_CONSUMIDO2;
+    }
+
+
 
 
     @Override
@@ -91,7 +115,7 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
 
         //P_ADMISSAO
         CV = new double[]{2.284141E-14, -1.679870E-09, 2.609061E-04, -1.159790E-01};
-        result[Index.P_ADMIN.ordinal()] = EV.polyval(CV,counts[P_ADMIN]);
+        result[Index.P_ADMIN.ordinal()] = EV.polyval(CV,counts[P_ADMIN]) *  2.03602;
 
         //MANETE_GASES
         CV = new double[]{-1.050471E-11, 4.873513E-07, -1.446523E-02, 1.709800E02};
@@ -142,11 +166,10 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
         CV = new double[]{1.104728E-11, -1.245681E-07, 1.616881E-02, -5.190770E00 };
         result[Index.VI.ordinal()] = Conversion.qc2vc(counts[QB], CV);
 
-
-
         //POLEO
+        AJUSTE_MBAR_PSI_PB = result[Index.PB.ordinal()] * 0.0145038;
         CV = new double[]{1.106099E-14, -1.039409E-09, 4.609634E-03, -8.489569E-01};
-        result[Index.POLEO.ordinal()] = EV.polyval(CV,counts[POLEO]);
+        result[Index.POLEO.ordinal()] = EV.polyval(CV,counts[POLEO]) + AJUSTE_MBAR_PSI_PB;
 
         //TI
         CV = new double[]{1.122463E-14 , -1.572081E-09, 1.587530E-03};
@@ -170,6 +193,9 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
 
         //DETOT
         result[Index.DETOT.ordinal()] = CalculeDETOT(result[Index.FF.ordinal()]);
+
+        //DETOT2
+        result[Index.DETOT_SEG.ordinal()] = CalculeDETOTSEG(result[Index.TEMPO.ordinal()], result[Index.FF.ordinal()]);
 
         //BOOSTER
         result[Index.BOOSTER.ordinal()] = Conversion.bit1(counts[DSI_LO], 13);
