@@ -16,7 +16,7 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
     public static final int TCG102C_0_J3_HI_TI = 41 - OFFSET_IENA;
     public static final int TCG102C_0_J3_LO_TI = 48 - OFFSET_IENA;
     public static final int TCG102C_0_J3_MI_TI=  49 - OFFSET_IENA;
-    public static final int T5 = 59 - OFFSET_IENA;
+
     public static final int RPM_LO = 31 - OFFSET_IENA;
     public static final int M_GASES = 20 - OFFSET_IENA;
     public static final int M_MISTURA = 21 - OFFSET_IENA;
@@ -31,42 +31,37 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
     public static final int PCOMB = 26  - OFFSET_IENA;
     public static final int POLEO = 28 - OFFSET_IENA;
     public static final int TOLEO = 55  - OFFSET_IENA;
+    public static final int T5 = 59 - OFFSET_IENA;
     public static final int FLAPE = 14 - OFFSET_IENA;
     public static final int TI = 56 - OFFSET_IENA;
     public static final int FLAPE_SYNCHRO = 15 - OFFSET_IENA;
-    public static int DETOT_TOTAL;
+    public static double DETOT_TOTAL;
     public double DETOT_CONSUMIDO2 = 0;
     public double DETOT_CONSUMIDO = 0;
     public static double TEMPO_SAD_MOMENTO;
     public static double TEMPO_SAD_ANTERIOR = 0;
-    public static double AJUSTE_MBAR_PSI_PB;
     public static double DETOT_MOMENTO2;
     public static double DETOT_MOMENTO;
     private Context context;
     public SharedPreferences sharedPref;
 
-    public CoefsSAD1(Context context) {
+    public CoefsSAD1(Context context , double detot_atual) {
         this.context = context;
-        initializeDetotTotal();
+        DETOT_TOTAL = detot_atual;
     }
 
-    private void initializeDetotTotal() {
+    private void saveDETOT(double detot_atual){
         sharedPref = context.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
-        DETOT_TOTAL = sharedPref.getInt("detot", 0);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("detot", String.valueOf(detot_atual)); // Armazena como String
+        editor.commit();
     }
 
-    public void UpdateDETOT(int detot){
-        DETOT_TOTAL = detot;
-    }
 
     public double  CalculeDETOT (double Detot_momento) {
 
-
         DETOT_MOMENTO =  (Detot_momento/ (60 * 60)) / 32;
-      //  Log.d("", "DETOT MOMENTO: " + DETOT_MOMENTO);
         DETOT_CONSUMIDO = DETOT_CONSUMIDO + DETOT_MOMENTO;
-       // Log.d("", "DETOT CONSUMIDO: " + DETOT_CONSUMIDO);
-
 
         return DETOT_TOTAL - DETOT_CONSUMIDO;
     }
@@ -104,7 +99,7 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
         result[Index.RPM.ordinal()] = EV.polyval(CV,counts[RPM_LO]);
 
         //EGT
-        CV = new double[]{4.519184E-02, -4.578916E02};
+        CV = new double[]{8.27371001E-10 , 4.51250851E-02, -4.5505371E02};
         result[Index.EGT.ordinal()] = EV.polyval(CV,counts[EGT]);
 
         //FLAPE
@@ -116,7 +111,7 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
         result[Index.TA.ordinal()] = EV.polyval(CV,counts[TA]);
 
         //P_ADMISSAO
-        CV = new double[]{2.284141E-14, -1.679870E-09, 2.609061E-04, -1.159790E-01};
+        CV = new double[]{4.3544E-16, -2.94E-11, 2.2932E-04, 3.30E-03};
         result[Index.P_ADMIN.ordinal()] = EV.polyval(CV,counts[P_ADMIN]) *  2.03602;
 
         //MANETE_GASES
@@ -139,7 +134,6 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
 
         //LUZ CIMA 2
         result[Index.LUZES_TREM_2.ordinal()] = Conversion.bit1(counts[DSI_HI], 7);
-
         //LUZ CIMA 3
         result[Index.LUZES_TREM_3.ordinal()] = Conversion.bit1(counts[DSI_HI], 8);
 
@@ -169,21 +163,23 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
         result[Index.VI.ordinal()] = Conversion.qc2vc(counts[QB], CV);
 
         //POLEO
-        AJUSTE_MBAR_PSI_PB = result[Index.PB.ordinal()] * 0.0145038;
+
         CV = new double[]{1.106099E-14, -1.039409E-09, 4.609634E-03, -8.489569E-01};
-        result[Index.POLEO.ordinal()] = EV.polyval(CV,counts[POLEO]) + AJUSTE_MBAR_PSI_PB;
+        result[Index.POLEO.ordinal()] = EV.polyval(CV,counts[POLEO]);
 
         //TI
         CV = new double[]{1.122463E-14 , -1.572081E-09, 1.587530E-03};
         result[Index.TI.ordinal()] = EV.polyval(CV,counts[TI]);
 
         //TOLEO
-        CV = new double[]{1.046599E-07, 1.182232E-02, -2.805004E02};
-        result[Index.TOLEO.ordinal()] = EV.polyval(CV,counts[TOLEO]);
+
+        CV = new double[]{1.05E-07, 1.18E-02, -2.81E+02};
+        result[Index.T5.ordinal()] = EV.polyval(CV,counts[T5]);
 
         //T5
         CV = new double[]{-6.923510E-11, 8.088771E-06, -2.921231E-01, 3.305075E03};
-        result[Index.T5.ordinal()] = EV.polyval(CV,counts[T5]);
+
+        result[Index.TOLEO.ordinal()] = EV.polyval(CV,counts[TOLEO]);
 
         //PCOMB
         CV = new double[]{-2.316451E-11, 2.360662E-04, -5.752361E-01};
@@ -193,11 +189,9 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
         CV = new double[]{-1.097021943531706e-002, 3.128981991511512e-001, -3.459836133476601e+000, 2.368354486742195e+001, 1.190697602056968e+001};
         result[Index.FF.ordinal()] = EV.polyval(CV, result[Index.PCOMB.ordinal()]);
 
-        //DETOT
-        result[Index.DETOT.ordinal()] = CalculeDETOT(result[Index.FF.ordinal()]);
-
         //DETOT2
         result[Index.DETOT_SEG.ordinal()] = CalculeDETOTSEG(result[Index.TEMPO.ordinal()], result[Index.FF.ordinal()]);
+        saveDETOT(result[Index.DETOT_SEG.ordinal()]);
 
         //BOOSTER
         result[Index.BOOSTER.ordinal()] = Conversion.bit1(counts[DSI_LO], 13);

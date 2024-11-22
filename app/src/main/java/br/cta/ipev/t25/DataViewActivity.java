@@ -1,7 +1,9 @@
 package br.cta.ipev.t25;
 
 import android.app.ActivityGroup;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +22,7 @@ public class DataViewActivity  extends ActivityGroup{
     private AppManager missionManager;
     private TabHost tabHost;
     private boolean isTablet;
+    public static final String PREF_FILE_NAME = "T25_DETOT";
 
 
     @Override
@@ -28,7 +31,7 @@ public class DataViewActivity  extends ActivityGroup{
         setContentView(R.layout.activity_data_view);
 
         this.isTablet = true;
-        //this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         missionManager = (AppManager) getApplicationContext();
         createMission();
         createTabs();
@@ -44,12 +47,18 @@ public class DataViewActivity  extends ActivityGroup{
     private void createMission(){
 
         IenaPacketReceiver ienaPacketReceiver = new IenaPacketReceiver(getBaseContext());
-        ienaPacketReceiver.setConverter(new CoefsSAD1(this));
+        ienaPacketReceiver.setConverter(new CoefsSAD1(this, initializeDetotTotal()));
 
         missionManager.setUdpConnector(new UDPConnector(1024),ienaPacketReceiver);
         missionManager.start();
     }
 
+    private double initializeDetotTotal() {
+        SharedPreferences sharedPref = getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
+        String detotString = sharedPref.getString("detot", "0"); // Obtém como String
+
+        return  Double.parseDouble(detotString);
+    }
 
     private void createTabs(){
         this.tabHost = (findViewById(android.R.id.tabhost));

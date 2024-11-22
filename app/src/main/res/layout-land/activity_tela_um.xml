@@ -182,90 +182,156 @@
             android:layout_weight="1.5"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textViewTimer"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:text="00:00"
-                android:textSize="80sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="START"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:padding="5dp"
-                    android:id="@+id/buttonSTART">
-
-                </Button>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:text="STOP"
-                    android:id="@+id/buttonSTOP">
-
-                </Button>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ZERAR"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:id="@+id/buttonZERO">
-                </Button>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="DETOT INICIAL: "
-                    android:textSize="20sp"
-                    android:typeface="normal"
-                    android:textStyle="bold"
-                    android:textColor="@color/black">
-
-                </TextView>
-
-                <EditText
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textViewTimer"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="     0    "
-                    android:id="@+id/insereDETOT"
-                    android:textStyle="bold"
-                    android:inputType="numberDecimal"
-                    android:textSize="25sp">
-                </EditText>
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:text="00:00"
+                    android:layout_weight="1"
+                    android:textSize="50sp" />
 
-                <Button
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Salvar"
-                    android:id="@+id/buttonDETOT">
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                </Button>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="START"
+                            android:layout_weight="1"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:id="@+id/buttonSTART">
+
+                        </Button>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="5dp"
+                            android:text="STOP"
+                            android:id="@+id/buttonSTOP">
+
+                        </Button>
+
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ZERAR"
+                        android:layout_margin="5dp"
+                        android:id="@+id/buttonZERO">
+                    </Button>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TEMPO DE VOO"
+                        android:textSize="20sp"
+                        android:typeface="normal"
+                        android:textStyle="bold"
+                        android:textColor="@color/black">
+
+                    </TextView>
+
+                    <Chronometer
+                        android:layout_width="match_parent"
+                        android:textSize="30sp"
+                        android:id="@+id/chrono_tempo_voo"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_height="match_parent">
+
+                    </Chronometer>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="INICIAR"
+                        android:id="@+id/buttonSTART_TIME">
+
+                    </Button>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DETOT INICIAL: "
+                        android:textSize="20sp"
+                        android:typeface="normal"
+                        android:textStyle="bold"
+                        android:textColor="@color/black">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:layout_weight="3"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="     0    "
+                            android:id="@+id/insereDETOT"
+                            android:textStyle="bold"
+                            android:inputType="numberDecimal"
+                            android:textSize="25sp">
+                        </EditText>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Salvar"
+                            android:id="@+id/buttonDETOT">
+
+                        </Button>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -320,7 +386,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     style="@style/medium_text"
-                    android:text="DETOT(litros)"/>
+                    android:text="DETOT (l)"/>
                 <br.cta.ipev.commom.compat.instruments.SingleDisplay
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -328,7 +394,7 @@
                     style="@style/big_value"
                     android:text="VALOR"
                     android:id="@+id/txtDETOT"
-                    custom:decimalPlaces="0"/>
+                    custom:decimalPlaces="1"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -516,15 +582,15 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    style="@style/medium_text"
-                    android:text="DETOT(SAD)"/>
+                    style="@style/small_text"
+                    android:text=""/>
                 <br.cta.ipev.commom.compat.instruments.SingleDisplay
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     style="@style/big_value"
-                    android:text="VALOR"
-                    android:id="@+id/txtPasso2"
+                    android:text=""
+                    android:id="@+id/txtDETOT2"
                     custom:decimalPlaces="1"/>
             </LinearLayout>
         </LinearLayout>

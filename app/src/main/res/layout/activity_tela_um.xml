@@ -10,19 +10,69 @@
         android:layout_weight="3"
         android:orientation="horizontal"
         android:layout_marginBottom="5sp">
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
+
+
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/tempo"
-            style="@style/medium_time"/>
-        <br.cta.ipev.commom.compat.instruments.SingleDisplay
+            style="@style/medium_time"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <br.cta.ipev.commom.compat.instruments.SingleDisplay
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="TEMPO DE VOO"
+                style="@style/small_time"/>
+
+
+            <Chronometer
+                android:layout_width="match_parent"
+                android:textSize="35sp"
+                android:id="@+id/chrono_tempo_voo"
+                android:layout_weight="1"
+                style="@style/medium_time"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+            </Chronometer>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/txtTempo"
-            android:text="TEMPO"
-            style="@style/medium_time"/>
+            android:orientation="vertical"
+            style="@style/medium_time"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INICIAR"
+                android:layout_weight="1"
+                android:id="@+id/buttonSTART_TIME">
+
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ZERAR"
+                android:layout_weight="1"
+                android:id="@+id/buttonZERO_TIME">
+
+            </Button>
+
+        </LinearLayout>
+
+
+
+
         <br.cta.ipev.commom.compat.instruments.SingleDisplay
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -182,26 +232,32 @@
             android:layout_weight="1.5"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
             <TextView
                 android:id="@+id/textViewTimer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:text="00:00"
-                android:textSize="70sp" />
+                android:layout_weight="1"
+                android:textSize="50sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:gravity="center"
                 android:orientation="vertical">
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="horizontal">
@@ -230,10 +286,9 @@
                 </LinearLayout>
                 <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_height="wrap_content"
                     android:text="ZERAR"
                     android:layout_margin="5dp"
-                    android:layout_weight="1"
                     android:id="@+id/buttonZERO">
                 </Button>
 
@@ -243,7 +298,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="bottom"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -264,6 +320,7 @@
                     android:hint="     0    "
                     android:id="@+id/insereDETOT"
                     android:textStyle="bold"
+                    android:textAlignment="center"
                     android:inputType="numberDecimal"
                     android:textSize="25sp">
                 </EditText>
@@ -276,6 +333,7 @@
 
                 </Button>
 
+            </LinearLayout>
 
             </LinearLayout>
 
@@ -478,7 +536,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     style="@style/medium_text"
-                    android:text="TÓleo (psi)"/>
+                    android:text="TÓleo(°F)"/>
                 <br.cta.ipev.commom.compat.instruments.SingleDisplay
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -527,13 +585,13 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     style="@style/small_text"
-                    android:text="DETOT(SAD)"/>
+                    android:text=""/>
                 <br.cta.ipev.commom.compat.instruments.SingleDisplay
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     style="@style/big_value"
-                    android:text="VALOR"
+                    android:text=""
                     android:id="@+id/txtDETOT2"
                     custom:decimalPlaces="1"/>
             </LinearLayout>
