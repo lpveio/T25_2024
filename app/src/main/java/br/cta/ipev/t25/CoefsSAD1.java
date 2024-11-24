@@ -104,7 +104,7 @@ public class CoefsSAD1 extends CoefsSAD implements iCounts2UE {
 
         //FLAPE
         CV = new double[]{1.030570E-13, -1.440329E-08, -5.643074E-04, 6.084511E01};
-        result[Index.FLAPE_SYNCHRO.ordinal()] = EV.polyval(CV,counts[FLAPE_SYNCHRO]);
+        result[Index.FLAPE_SYNCHRO.ordinal()] = Conversion.FlapeZero(CV, counts[FLAPE_SYNCHRO]);
 
         //OAT
         CV = new double[]{8.894448E-12, -5.778276E-07, 2.243144E-02, -3.547702E02};

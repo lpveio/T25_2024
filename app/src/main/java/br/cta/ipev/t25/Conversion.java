@@ -23,6 +23,15 @@ public class Conversion {
         return  (int) (ff_total - ( data / 32));
     }
 
+
+    public static double FlapeZero(double [] coefs, double count) {
+        double result = polyval(coefs, count);
+        if (result < 0) {
+            return 0;
+        }
+        return result;
+    }
+
     public static double[] polyfit(double[] data, int OP) {
         WeightedObservedPoints obs = new WeightedObservedPoints();
 
